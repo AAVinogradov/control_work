@@ -16,13 +16,6 @@
 // [“Russia”, “Denmark”, “Kazan”] → []
 
 
-int ManualInput()
-{
-    int value = Convert.ToInt32(Console.ReadLine());
-    return value;
-}
-
-
 string[] GetMatrix()
 {
     Console.Write("Введите длмнну масива: ");
@@ -36,59 +29,44 @@ string[] GetMatrix()
     return array; 
 }
 
-void PrintMatrix(string[] matrix)
+string[] ChangeData(string[] matrix1)
 {
-    for (int i = 0; i < matrix.Length; i++)
+    string[] matrix2 = new string[matrix1.Length];
+    for (int i = 0; i < matrix1.Length; i++)
     {
-        Console.Write($"{matrix[i]}\t");
+        string str = matrix1[i];
+        str = str.Replace("a", "");
+        str = str.Replace("A", "");
+        str = str.Replace("e", "");
+        str = str.Replace("E", "");
+        str = str.Replace("i", "");
+        str = str.Replace("I", "");
+        str = str.Replace("o", "");
+        str = str.Replace("O", "");
+        str = str.Replace("u", "");
+        str = str.Replace("U", "");
+        str = str.Replace("y", "");
+        str = str.Replace("Y", "");
+        str = str.Replace("0", "*");
+        str = str.Replace("1", "");
+        str = str.Replace("2", "*");
+        str = str.Replace("3", "");
+        str = str.Replace("4", "*");
+        str = str.Replace("5", "");
+        str = str.Replace("6", "*");
+        str = str.Replace("7", "");
+        str = str.Replace("8", "*");
+        str = str.Replace("9", "");
+        matrix2[i] = str;      
     }
+    return matrix2;
 }
-// string[] ChangeData(string[] matrix1, string[] matrix2)
-// {
-//     for (int i = 0; i < matrix1.Length; i++)
-//     {
-//         for (int j = 0; j < matrix2.Length; j++)
-//         {
-//             string str = matrix1[i];
-//             int lenght = str.Length;
-//             string result = String.Empty; 
-//         }
-//     }
-// }
 
 string[] myArray1 = GetMatrix();
-string[] myArray2 = myArray1; // должен быть метод ChangeData
 Console.WriteLine("Сгенерированный массив:");
 Console.WriteLine($"[{string.Join(", ", myArray1)}]");
 Console.WriteLine();
-// string difference = Difference(myArray);
-// Console.WriteLine($"Разница между максимальным и минимальным элементом массива = {string.Format("{0:N2}", difference)}");
+string[] myArray2 = ChangeData(myArray1); 
 Console.WriteLine("Измененный массив:");
 Console.WriteLine($"[{string.Join(", ", myArray2)}]");
 
-
-
-
-// string text = "— Я думаю, — сказал князь, улыбаясь, — что,"
-//             + "ежели бы вас послали вместо нашего милого Винценгероде,"
-//             + "вы бы взяли приступом согласие прусского короля."
-//             + "Вы так красноречивы. Вы дадите мне чаю?";
-// string Replace(string text, char oldValue, char newValue)
-// {
-//     string result = String.Empty;
-//     int lenght = text.Length;
-//     for (int i = 0; i < lenght; i++)
-//     {
-//         if(text[i] == oldValue) result = result + $"{newValue}";
-//         else result = result + $"{text[i]}";
-//     }
-//     return result;
-// }
-// string newText = Replace(text, ' ', '|');
-// Console.WriteLine(newText);
-// Console.WriteLine();
-// newText = Replace(newText, 'k', 'K');
-// Console.WriteLine(newText);
-// Console.WriteLine();
-// newText = Replace(newText, 'В', 'в');
-// Console.WriteLine(newText);
