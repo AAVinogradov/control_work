@@ -72,8 +72,8 @@ string[] ChangeMatrix(string[] matrix1)
         
         if(matrix1[i].Length <= 3)
         {
-            matrix2[x] = matrix1[i];
-            x = x + 1;
+            matrix2[i] = matrix1[i];
+            // x = x + 1;
         }
     }
     return matrix2;
