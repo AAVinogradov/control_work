@@ -65,15 +65,12 @@ string[] RemoveVowelLetters(string[] matrix1)
 
 string[] ChangeMatrix(string[] matrix1)
 {
-    int x = 0;
     string[] matrix2 = new string[matrix1.Length];
     for (int i = 0; i < matrix1.Length; i++)
     {
-        
         if(matrix1[i].Length <= 3)
         {
             matrix2[i] = matrix1[i];
-            // x = x + 1;
         }
     }
     return matrix2;
@@ -88,8 +85,8 @@ string[] myArray2 = RemoveVowelLetters(myArray1);
 Console.WriteLine("Полученный массив при первой трактовке задачи, когда необходимо уменьшить строки:");
 Console.Write($"[{string.Join(", ", myArray2)}]");
 Console.WriteLine();
-
 string[] myArray2_2 = ChangeMatrix(myArray1); 
+Console.WriteLine();
 Console.WriteLine("Полученный массив при трактовке задачи, когда нужно вывести строки из массива 1, которые меньше или равны трем символам:");
 Console.Write($"[{string.Join( " ", myArray2_2)}]");
 Console.WriteLine();
