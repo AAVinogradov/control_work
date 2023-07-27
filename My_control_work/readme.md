@@ -10,4 +10,4 @@
 
 # Блок-схема
 
-![Схема](img\img.jpg)
+![Схема](https://github.com/AAVinogradov/control_work/blob/master/img/img.jpg?raw=true)
