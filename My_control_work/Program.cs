@@ -81,7 +81,6 @@ string[] ChangeMatrix(string[] matrix1)
     return matrix2;
 }
 
-
 string[] myArray1 = GetMatrix();
 Console.WriteLine("Заданный массив:");
 Console.Write($"[{string.Join(", ", myArray1)}]");
