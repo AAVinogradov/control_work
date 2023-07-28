@@ -93,5 +93,3 @@ Console.WriteLine();
 Console.WriteLine("Полученный массив при трактовке задачи, когда нужно вывести строки из массива 1, которые меньше или равны трем символам:");
 string[] myArray2_2 = ChangeMatrix(myArray1); 
 Console.Write($"{string.Join(" ", myArray2_2)}");
-
-
